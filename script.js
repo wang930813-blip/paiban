@@ -277,7 +277,6 @@ function renderAll(existingBlocks) {
   preview.innerHTML = `
     <div class="article-sheet">
       <header class="article-title-block">
-        <span>AI 智能优选版式</span>
         <h1>${inline(titleInput.value || classified.title)}</h1>
       </header>
       ${summaryInput.value.trim() ? `<section class="article-summary"><p>${inline(summaryInput.value)}</p></section>` : ''}
