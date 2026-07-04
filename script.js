@@ -283,7 +283,6 @@ function renderAll(existingBlocks) {
       ${keys.length ? renderKeys(keys) : ''}
       <section class="article-body">${blocks.map(renderBlock).join('')}</section>
       ${catalog.length ? renderCatalog(catalog) : ''}
-      <footer class="article-end"><strong>读完建议</strong><p>先看重点，再按正文结构复盘，最后从课程目录进入对应内容。</p></footer>
     </div>
   `;
 
