@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>狗凯智能排版</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Inter:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="studio">
+      <section class="input-column" aria-label="内容输入和识别结果">
+        <header class="brand-bar">
+          <div>
+            <span class="pill">Qinghe Smart Layout</span>
+            <h1>狗凯智能排版</h1>
+          </div>
+          <button id="demoBtn" class="button ghost" type="button">示例</button>
+        </header>
+
+        <section class="card raw-card">
+          <div class="card-head">
+            <div>
+              <h2>原文</h2>
+              <p>粘贴文章，系统自动拆解标题、导语、段落、重点和课程目录。</p>
+            </div>
+            <button id="analyzeBtn" class="button primary" type="button">智能拆解排版</button>
+          </div>
+          <textarea id="rawInput" class="raw-input" spellcheck="false"></textarea>
+        </section>
+
+        <section class="card ai-card">
+          <div class="card-head compact-head">
+            <div>
+              <h2>AI 识别结果</h2>
+              <p>识别结果可编辑，最终排版以这里为准。</p>
+            </div>
+            <label class="color-field">
+              <span>强调色</span>
+              <input id="accentInput" type="color" value="#1f5f55" />
+            </label>
+          </div>
+
+          <label class="field-block">
+            <span>文章标题</span>
+            <input id="titleInput" type="text" />
+          </label>
+
+          <label class="field-block">
+            <span>导语摘要</span>
+            <textarea id="summaryInput" class="small-textarea" spellcheck="false"></textarea>
+          </label>
+
+          <div class="split-fields">
+            <label class="field-block">
+              <span>重点内容</span>
+              <textarea id="keyInput" class="small-textarea" spellcheck="false"></textarea>
+            </label>
+            <label class="field-block">
+              <span>课程目录</span>
+              <textarea id="catalogInput" class="small-textarea" spellcheck="false"></textarea>
+            </label>
+          </div>
+        </section>
+      </section>
+
+      <section class="preview-column" aria-label="公众号预览">
+        <div class="preview-top">
+          <div>
+            <span class="pill dark">Publish Preview</span>
+            <h2>公众号发布预览</h2>
+          </div>
+          <div class="preview-actions">
+            <button id="copyRichBtn" class="button primary" type="button">复制富文本</button>
+            <button id="copyPlainBtn" class="button ghost" type="button">复制纯文本</button>
+          </div>
+        </div>
+
+        <div class="phone">
+          <div class="phone-bar">
+            <span>微信公众号</span>
+            <span>已优化</span>
+          </div>
+          <article id="preview" class="preview"></article>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
